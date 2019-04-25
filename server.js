@@ -8,10 +8,10 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Import files
-var htmlRoutes = require('./app/routing/htmlRoutes.js');
-var apiRoutes = require('./app/routing/apiRoutes.js');
+var htmlRoutes = require('./FriendFinder/routing/htmlRoutes.js');
+var apiRoutes = require('./FriendFinder/routing/apiRoutes');
 
-app.use(express.static('app/public'));
+app.use(express.static('FriendFinder/public'));
 htmlRoutes(app);
 apiRoutes(app);
 
